@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniForms'a Kayıt Ol</title>
+    <!-- css dosyasini bagladik -->
+    <link rel="stylesheet" href="sign_up.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-form">
+            <h1>UniForms'a Kayıt Ol</h1>
+            <form>
+                <div class="input-group">
+                    <label for="firstName">Ad*</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Ad" required>
+                </div>
+                <div class="input-group">
+                    <label for="lastName">Soyad*</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Soyad" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Şifre*</label>
+                    <input type="password" id="password" name="password" placeholder="Şifre" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">Şifre Tekrar*</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Şifre Tekrar" required>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Kullanım Koşullarını ve gizlilik politikasını okudum ve kabul ediyorum.</label>
+                </div>
+                <button type="submit" class="signup-button">Kayıt ol</button>
+            </form>
+            <div class="login-link">
+                <p>Zaten bir hesabın mı var? <a href="log_in.html">Giriş yap</a></p>
+            </div>
+        </div>
+        <div class="signup-image">
+            <img src="sign_up.png" alt="Sign Up Image">
+        </div>
+    </div>
+    <!-- JavaScript dosyasini bagladik -->
+    <script src="sign_up.js"></script>
+</body>
+</html>

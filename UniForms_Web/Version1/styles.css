@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif; /*Yazi tipi*/
+    background-color: #f9f9f9;
+    display: flex;  /*Ortalamak*/
+    justify-content: center; /*Yatayda ortalamak*/
+    align-items: center; /*Dikeyde ortalamak*/
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /*Koseler icin*/
+    overflow: hidden; /*Tasmamasi icin*/
+    position: relative; /*ic ice gecmeyi onlemek*/
+    background-color: #fff;
+}
+
+.form-container {
+    display: flex; /* formlari yanyana koymak icin */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1; 
+    transition: transform 0.5s ease-in-out; /* gecis animasyonu */
+}
+
+.form {
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: white;
+    transition: opacity 0.5s ease-in-out; /* opaklik gecisi */
+    opacity: 0; /* basta gorunmuyo */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form.active {
+    opacity: 1; /* gorunen forn */
+}
+
+h2 {
+    color: #4b0082;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+.button {
+    width: 100%;
+    padding: 14px; 
+    background-color: #4b0082;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* zuerine gelince fare isareti */
+    font-size: 18px; 
+}
+
+
+.button:hover {
+    background-color: #5e1b99;
+}
+
+.link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.link span {
+    color: #4b0082;
+    cursor: pointer;
+}
+
+.link span:hover {
+    text-decoration: underline; /*uzerine geldiginde alt cizgi*/
+}
+
+.image-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; 
+    transition: transform 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute; /* ust uste koyma */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* koyu seffaf arka plan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .text {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.overlay button {
+    padding: 10px 20px;
+    background-color: #4b0082;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.overlay button:hover {
+    background-color: #5e1b99;
+}
+
+.image-container.move-left {
+    transform: translateX(-100%);
+}
+
+/* resmin arkasina formu yerlestirme */
+.image-container.move-left ~ .form-container .form {
+    display: flex;
+}
+
+.login-form {
+    position: relative;
+    margin: auto;
+    max-width: 500px;
+    height: auto;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-form {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniForms</title>
+    <!-- CSS Dosyasi -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- Giris Yap Formu -->
+            <div class="form login-form active">
+                <h2>UniForms'a Giriş Yap</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="login-email">Email*</label>
+                        <input type="email" id="login-email" name="login-email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Şifre*</label>
+                        <input type="password" id="login-password" name="login-password" placeholder="Şifre" required>
+                    </div>
+                    <button type="submit" class="button">Giriş yap</button>
+                </form>
+                <div class="link">
+                    <p>Hesabın yok mu? <span id="showSignUp">Kayıt ol</span></p>
+                </div>
+            </div>
+
+            <!-- Kayit Ol Formu -->
+            <div class="form sign-up-form">
+                <h2>UniForms'a Kayıt Ol</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="firstName">Ad*</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Ad" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="lastName">Soyad*</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Soyad" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Şifre*</label>
+                        <input type="password" id="password" name="password" placeholder="Şifre" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirmPassword">Şifre Tekrar*</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Şifre Tekrar" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">Kullanım Koşullarını ve gizlilik politikasını okudum ve kabul ediyorum.</label>
+                    </div>
+                    <button type="submit" class="button">Kayıt ol</button>
+                </form>
+                <div class="link">
+                    <p>Zaten bir hesabın mı var? <span id="showLogin">Giriş yap</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kaydirilabilir Resim -->
+        <div class="image-container">
+            <img src="resim_deneme2.png" alt="Sign Up Image">
+            <div class="overlay">
+                <div class="text" id="hoverText">Giriş yap</div>
+                <button id="hoverButton">Giriş yap</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Dosyasi -->
+    <script src="scripts.js"></script>
+</body>
+</html>
